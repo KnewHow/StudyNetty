@@ -9,7 +9,8 @@ import java.net.Socket;
 public class BIOClient {
     public static void main(String[] args) throws Exception {
         long begin = System.currentTimeMillis();
-        Socket socket = new Socket("127.0.0.1", 5006);
+        Socket socket = new Socket("123.60.46.246", 5006);
+        //Socket socket = new Socket("127.0.01", 5006);
         OutputStream outputStream = socket.getOutputStream();
         DataOutputStream dataOutputStream = new DataOutputStream(outputStream);
         dataOutputStream.writeUTF("I am request from client");
