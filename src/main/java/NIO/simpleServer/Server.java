@@ -1,4 +1,4 @@
-package NIO;
+package NIO.simpleServer;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -41,6 +41,7 @@ public class Server {
                         socketChannel.read(byteBuffer);
                     } catch (Exception e){
                         System.out.println("client disconnect....");
+                        key.cancel();
                         socketChannel.close();
                         iterator.remove();
                         continue;
@@ -60,6 +61,7 @@ public class Server {
                         socketChannel.write(byteBuffer);
                     } catch (Exception e) {
                         System.out.println("client disconnect....");
+                        key.cancel();
                         socketChannel.close();
                         iterator.remove();
                         continue;

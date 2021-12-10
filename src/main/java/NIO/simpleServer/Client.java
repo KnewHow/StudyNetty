@@ -1,4 +1,4 @@
-package NIO;
+package NIO.simpleServer;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
